@@ -1,0 +1,7 @@
+selene==2.0.0b16
+pytest==7.2.1
+requests
+allure-pytest
+python-dotenv
+voluptuous
+pytest-voluptuous
