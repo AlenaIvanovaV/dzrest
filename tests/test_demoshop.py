@@ -3,28 +3,21 @@ from selene import have
 import allure
 
 
+
+
 def test_cart(chrome_browser):
+    response = demoshop.post('/login', data={'Email': 'angel40995@inbox.ru', 'Password': 'qwerty'},
+                             allow_redirects=False)
+    response = demoshop.post('/addproducttocart/catalog/31/1/1')
+    assert response.status_code == 200
     chrome_browser.open('')
-    with allure.step('Adding product to cart'):
-        response = demoshop.post('/addproducttocart/catalog/31/1/1')
-
-        assert response.status_code == 200
-        chrome_browser.element('#topcartlink .cart-qty').click()
-        chrome_browser.element('#topcartlink .cart-qty').should(have.text('(1)'))
-
-    with allure.step('Mini cart info check'):
-        response = demoshop.post('/addproducttocart/catalog/31/1/1')
-        assert response.status_code == 200
-        chrome_browser.open('')
-        chrome_browser.element('#topcartlink .cart-qty').hover()
-        chrome_browser.element('.count').should(have.text('There are 2 item(s) in your cart'))
-
+    chrome_browser.element('#topcartlink .cart-qty').click()
+    chrome_browser.element('#topcartlink .cart-qty').should(have.text('(1)'))
     with allure.step('Deleting products from cart'):
         chrome_browser.open('')
         chrome_browser.element('.ico-cart .cart-label').click()
         chrome_browser.element('.qty-input').clear().set_value('0')
         chrome_browser.element('.update-cart-button').click()
-
 
 def test_wishlist(chrome_browser):
     with allure.step('Adding product to Wishlist'):

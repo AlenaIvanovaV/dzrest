@@ -1,2 +1,2 @@
-LOGIN='sponge@bob.com'
-PASSWORD='qwerty'
+LOGIN = 'angel40995@inbox.ru'
+PASSWORD = 'qwerty'
