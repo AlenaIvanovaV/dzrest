@@ -5,3 +5,4 @@ allure-pytest
 python-dotenv
 voluptuous
 pytest-voluptuous
+curlify==2.2.1
