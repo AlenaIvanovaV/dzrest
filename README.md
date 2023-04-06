@@ -4,13 +4,13 @@
 
 ### Используемые технологии
 <p  align="center">
-  <code><img width="5%" title="Pycharm" src="./attachments/logo/pycharm.png"></code>
-  <code><img width="5%" title="Python" src="./attachments/logo/python.png"></code>
+  <code><img width="5%" title="Pycharm" src="./attachments/logo/pycharm.svg"></code>
+  <code><img width="5%" title="Python" src="./attachments/logo/Python-logo-notext.svg"></code>
   <code><img width="5%" title="Pytest" src="./attachments/logo/pytest.png"></code>
   <code><img width="5%" title="Selene" src="./attachments/logo/selene.png"></code>
-  <code><img width="5%" title="GitHub" src="./attachments/logo/github.png"></code>
-  <code><img width="5%" title="Allure Report" src="./attachments/logo/allure_report.png"></code>
-  <code><img width="5%" title="Jenkins" src="./attachments/logo/jenkins.png"></code>
+  <code><img width="5%" title="GitHub" src="./attachments/logo/git-logo.svg"></code>
+  <code><img width="5%" title="Allure Report" src="./attachments/logo/allure-Report-logo.svg"></code>
+  <code><img width="5%" title="Jenkins" src="./attachments/logo/jenkins-logo.svg"></code>
   <code><img width="5%" title="Requests" src="./attachments/logo/requests.png"></code>
 </p>
 
