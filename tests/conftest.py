@@ -1,6 +1,6 @@
+from utils.base_session import BaseSession
 import pytest
 from selene.support.jquery_style_selectors import browser
-from utils.base_session import BaseSession
 import os
 
 
