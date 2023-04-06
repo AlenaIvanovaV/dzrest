@@ -2,7 +2,7 @@ from pytest_voluptuous import S
 from schemas.resources import single_resource_schema, list_resource_schema
 import logging
 from utils.base_session import BaseSession
-from utils.base_session import regres
+
 reqres = BaseSession('https://reqres.in/')
 
 
