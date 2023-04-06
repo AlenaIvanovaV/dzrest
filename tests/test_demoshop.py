@@ -5,6 +5,22 @@ from utils.base_session import demoshop
 
 
 def test_cart(chrome_browser):
+    options = Options()
+    selenoid_capabilities = {
+        "browserName": "chrome",
+        "browserVersion": "100.0",
+        "selenoid:options": {
+            "enableVNC": True,
+            "enableVideo": False
+        }
+    }
+
+    options.capabilities, update(selenoid_capabilities)
+    driver = webdriver.Remote(
+        command_executor="https://user1%1234@selenoid:autotests.cloud/wd/hub",
+        options=options)
+
+    browser.config.driver = driver
     response = demoshop.post('/login', data={'Email': 'angel40995@inbox.ru', 'Password': 'qwerty'},
                              allow_redirects=False)
     with allure.step('Adding product to cart'):
@@ -21,6 +37,22 @@ def test_cart(chrome_browser):
 
 
 def test_wishlist(chrome_browser):
+    options = Options()
+    selenoid_capabilities = {
+        "browserName": "chrome",
+        "browserVersion": "100.0",
+        "selenoid:options": {
+            "enableVNC": True,
+            "enableVideo": False
+        }
+    }
+
+    options.capabilities, update(selenoid_capabilities)
+    driver = webdriver.Remote(
+        command_executor="https://user1%1234@selenoid:autotests.cloud/wd/hub",
+        options=options)
+
+    browser.config.driver = driver
     with allure.step('Adding product to Wishlist'):
         response = demoshop.post('/addproducttocart/details/14/2')
     assert response.status_code == 200
