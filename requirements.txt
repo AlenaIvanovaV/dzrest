@@ -5,5 +5,4 @@ pytest-voluptuous== 1.2.0
 selene==2.0.0b16
 python-dotenv==0.21.0
 allure-pytest==2.12.0
-selenium~=4.4.3
 curlify==2.2.1
