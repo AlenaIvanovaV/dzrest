@@ -11,7 +11,7 @@ load_dotenv()
 def demoshop():
     return BaseSession(os.getenv("API_URL_DEMOSHOP"))
 
-@pytest.fixture(scope="session", autouse=True)
+@pytest.fixture(scope="session", autouse=False)
 def chrome_browser(demoshop):
     options = Options()
     selenoid_capabilities = {

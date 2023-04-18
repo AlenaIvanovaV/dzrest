@@ -19,7 +19,7 @@ def test_cart(chrome_browser,demoshop):
   browser.element('.update-cart-button').click()
 
 
-def test_wishlist(chrome_browser):
+def test_wishlist(chrome_browser,demoshop):
   with allure.step('Adding product to Wishlist'):
     response = demoshop.post('/addproducttocart/details/14/2')
   assert response.status_code == 200
